@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonServiceService } from 'src/app/Services/common-service.service';
 
 @Component({
   selector: 'app-random-quotes-api',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RandomQuotesApiComponent implements OnInit {
 
-  constructor() { }
+  constructor(private commonService: CommonServiceService ) { }
 
   ngOnInit() {
+  }
+  showConfig(){
+
   }
 
 }
