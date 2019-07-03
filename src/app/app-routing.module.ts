@@ -5,15 +5,16 @@ import { PageLayoutComponent} from '../app/Pages/page-layout/page-layout.compone
 import { RandomQuotesLocalComponent } from './Pages/random-quotes-local/random-quotes-local.component';
 import { RandomQuotesApiComponent } from '../app/Pages/random-quotes-api/random-quotes-api.component';
 import { CreateQuotesComponent } from '../app/Pages/create-quotes/create-quotes.component';
-import { ListQuotesComponent } from '../app/Pages/list-quotes/list-quotes.component'
+import { ListQuotesComponent } from '../app/Pages/list-quotes/list-quotes.component';
 
 
 const routes: Routes = [
   {
     path: '', component: PageLayoutComponent,
     children: [
-      { path: 'localQuote',  component : RandomQuotesLocalComponent },
+      { path: '',   redirectTo: '/apiQuote', pathMatch: 'full' },
       { path : 'apiQuote', component : RandomQuotesApiComponent},
+      { path: 'localQuote',  component : RandomQuotesLocalComponent },
       { path : 'addQuote', component : CreateQuotesComponent},
       { path : 'listQuote', component : ListQuotesComponent}
     ]}
