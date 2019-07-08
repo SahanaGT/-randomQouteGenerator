@@ -1,5 +1,10 @@
-<div class="container-fluid">
-    <div class="row">
-        <h1>Local API</h1>
+ <div class="row col-md-12">
+    <div class="col-md-4"  *ngFor = "let i of list">
+        <div class="card custom_card" >
+            <h5 class="card-title">Quotes</h5>
+            <div class="card-body" >   
+                {{ i}}
+            </div>
+        </div>
     </div>
 </div>

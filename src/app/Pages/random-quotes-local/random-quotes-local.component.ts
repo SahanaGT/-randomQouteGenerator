@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RandomQuotesLocalComponent implements OnInit {
 
+  localData: any;
+  list = [];
   constructor() { }
 
   ngOnInit() {
+    this.showLocalQuotes();
   }
-
+  showLocalQuotes() {
+     this.localData = localStorage.getItem('quote');
+     this.list =  this.localData .split('@');
+     console.log(this.list);
+  }
 }
