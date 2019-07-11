@@ -19,6 +19,7 @@ const routes: Routes = [
       { path : 'listQuote', component : ListQuotesComponent}
     ]}
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

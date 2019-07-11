@@ -6,9 +6,9 @@
     </div>
     <div class="row">
         <div class="col-md-4">
-            <button [hidden] ="showBtn==true" type="button" 
+            <button [hidden] ="showBtn" type="button" 
                 class="btn btn-info" (click)="saveLocal(quotesList.quote)">Save to Local</button>
-            <button *ngIf ="showBtn==true" type="button" class="btn btn-info" >Saved !</button>
+            <button *ngIf ="showBtn" type="button" class="btn btn-info" >Saved !</button>
         </div>
         <div class="cil-md-4">
             <button  type="button" class="btn btn-info"  (click)="showQuotes()">Generate new</button>
